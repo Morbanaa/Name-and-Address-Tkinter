@@ -26,14 +26,22 @@ class My_Gui:
         self.button_info = Button(self.window,
                              text="Show Info",
                              command=self.show_info,
-                             font=('arial',50))
+                             font=('arial',50),
+                             fg="red",
+                             bg='black',
+                             activeforeground="red",
+                             activebackground="black")
         self.button_info.place(x=100,y=self.height-200)
 
         # Exit Button
         self.button_info = Button(self.window,
                             text="Exit",
                             command=self.window.destroy,
-                            font=('arial',50))
+                            font=('arial',50),
+                            fg="red",
+                            bg='black',
+                            activeforeground="red",
+                            activebackground="black")
         self.button_info.place(x=self.width-250,y=self.height-200)
 
         self.window.mainloop()
