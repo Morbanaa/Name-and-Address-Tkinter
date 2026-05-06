@@ -13,12 +13,13 @@ class My_Gui:
         self.window = Tk()
         self.window.title("Name and Address Program")
         self.window.geometry(f"{self.width}x{self.height}")
+        self.window.resizable(False,False)
         self.icon = PhotoImage(file="M.png")
         self.window.iconphoto(True,self.icon)
-        self.window.config(background="grey")
+        self.window.config(background="#05b1f5")
 
         # Labels
-        self.label = Label(self.window,text="") # Starts Empty
+        self.label = Label(self.window,text="",font=("arial",30)) # Starts Empty
         self.label.pack()
 
         # Show Info Button
@@ -26,14 +27,14 @@ class My_Gui:
                              text="Show Info",
                              command=self.show_info,
                              font=('arial',50))
-        self.button_info.place(x=50,y=self.height-200)
+        self.button_info.place(x=100,y=self.height-200)
 
         # Exit Button
         self.button_info = Button(self.window,
                             text="Exit",
                             command=self.window.destroy,
                             font=('arial',50))
-        self.button_info.place(x=self.width-200,y=self.height-200)
+        self.button_info.place(x=self.width-250,y=self.height-200)
 
         self.window.mainloop()
 
